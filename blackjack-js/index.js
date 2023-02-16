@@ -1,3 +1,7 @@
+let player = {
+    name:"Nik",
+    chips: 145
+}
 let firstCard = getRandomNumber()
 let secondCard = getRandomNumber()
 let cards = [firstCard, secondCard]
@@ -6,6 +10,9 @@ let isAlive = false
 let hasBlackJack = false
 let message = " "
 
+
+let playerEl = document.getElementById("player-el")
+playerEl.textContent = player.name + " : " + player.chips
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
@@ -61,6 +68,7 @@ function newCard(){
         messageEl.textContent = "PLEASE REFRESH THE PAGE TO RESTART"
         sumEl.textContent = ""
         cardsEl.textContent = "" 
+        
     }
     
 }
